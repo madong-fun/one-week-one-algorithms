@@ -11,6 +11,8 @@ public:
     void select_sort(int *array, int size); //选择排序
 
     void bubble_sort(int *array, int size);
+    
+    void bubble_sort_pro(int *array, int size);
 
 private:
     void swap(int &a, int &b);
