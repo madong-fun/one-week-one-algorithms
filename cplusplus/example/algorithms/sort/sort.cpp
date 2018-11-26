@@ -39,6 +39,26 @@ void sort::bubble_sort(int *array, int size) {
     }
 }
 
+void sort ::bubble_sort_pro(int *array, int size) {
+
+    bool flag = false;
+    for (int i = 0; i < size ; ++i) {
+        for (int j = 0; j < size-1 ; ++j) {
+            if (array[j] > array[j+1]) {
+                exchange(array[j],array[j+1]);
+                flag = true;
+            }
+        }
+       
+        // 假如 循环一次没有发生交换，说明已然有序，终止循环
+        if (!flag){
+            break;
+        } else{
+            flag = false;
+        }
+    }
+}
+
 void sort::swap(int &a, int &b) {
     a = a ^ b;
     b = a ^ b;
